@@ -1,11 +1,11 @@
-/*
- * Copyright (C) 2020 The LineageOS Project
+/**
+ * Copyright (c) 2009, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,9 +16,9 @@
 
 #include <stdint.h>
 #include <drm/sde_drm.h>
-#include <compositionengine/FodExtension.h>
+#include <compositionengine/UdfpsExtension.h>
 
-uint32_t getFodZOrder(uint32_t z, bool touched) {
+uint32_t getUdfpsZOrder(uint32_t z, bool touched) {
     if (touched) {
         z |= FOD_PRESSED_LAYER_ZORDER;
     }
@@ -26,7 +26,7 @@ uint32_t getFodZOrder(uint32_t z, bool touched) {
     return z;
 }
 
-uint64_t getFodUsageBits(uint64_t usageBits, bool touched) {
+uint64_t getUdfpsUsageBits(uint64_t usageBits, bool touched) {
     (void) touched;
     return usageBits;
 }
